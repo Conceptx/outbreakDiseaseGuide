@@ -1,0 +1,78 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By Build Systems
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+.zoom {
+  transition: transform 0.2s;
+  /* Animation */
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.25);
+  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+html {
+  background: url(../img/pills.jpeg) no-repeat;
+  background-size: cover;
+}
+
+nav,
+.tab {
+  background-color: #062338 !important;
+}
+
+.section-nav>.card-panel {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  height: 150px;
+  border: 1px solid black;
+}
+
+.section-nav {
+  margin-top: 100px;
+  margin-left: 0px;
+}
+
+.brand-logo {
+  margin-left: 40px;
+}
+
+.content-area>ul {
+  height: 600px !important;
+  border: 1px solid black;
+}
+
+.tabs-vertical {
+  flex-direction: column !important;
+  height: 100%;
+}
+
+.tabs .indicator {
+  display: none;
+}
+
+.content-area li {
+  height: 150px !important;
+  border-bottom: 1px solid white;
+  text-align: justify;
+}
+
+.box {
+  background: rgb(33, 150, 243, 0.5);
+  height: 600px;
+  border: 1px solid black;
+}

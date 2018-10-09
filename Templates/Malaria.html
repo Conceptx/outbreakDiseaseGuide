@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--Stylesheets-->
+  <link rel="stylesheet" href="../static/css/fontawesome.css">
+  <link rel="stylesheet" href="../static/css/materialize.css">
+  <link rel="stylesheet" href="../static/css/iconfont/material-icons.css">
+  <link rel="stylesheet" href="../static/css/style.css">
+
+  <title>ODG - Outbreak Disease Guide</title>
+</head>
+
+<body>
+  <nav>
+    <div class="row z-depth-2">
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo left">Outbreak Disease Guide</a>
+        <a class="dropdown-trigger right" data-target="dropdown">
+          <i class="material-icons white-text medium">menu</i>
+        </a>
+        <ul class="hide-on-med-and-down right ">
+          <li>
+            <a href="#">HOME</a>
+          </li>
+          <li>
+            <a href="#">MoHCC</a>
+          </li>
+          <li>
+            <a href="#">WHO</a>
+          </li>
+          <li>
+            <a href="#">SPONSORS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <ul class="dropdown-content" id="dropdown">
+    <li>
+      <a href="#" class="hoverable">HOME</a>
+    </li>
+    <li>
+      <a href="#" class="hoverable">MoHCC</a>
+    </li>
+    <li>
+      <a href="#" class="hoverable">WHO</a>
+    </li>
+    <li>
+      <a href="#" class="hoverable">SPONSORS</a>
+    </li>
+    {% for i in diseases %}
+    <li>
+      <a href="#" style="text-transform: uppercase">{{i}}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <!-- Section Mini-Sidenav Disease-Index -->
+  <section class="section section-nav center">
+    <div class="row">
+      <div class="col m3 hide-on-small-and-down">
+        {% for i in diseases %}
+        <div class="col m12 zoom zoom-hover">
+          <div class="card-panel small blue">
+            <h4>{{i}}</h4>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="col m1">
+
+      </div>
+      <div class="col m8 content-area">
+        <div class="container">
+          <div class="row ">
+            <div class="col s4">
+              <div class="row ">
+                <ul class="tabs tabs-vertical">
+                  <li class="col s12 tab"><a href="#tab1"><b class="white-text">Background</b></a></li>
+                  <li class="col s12 tab"><a href="#tab2"><b class="white-text">Causes</b></a></li>
+                  <li class="col s12 tab"><a href="#tab3"><b class="white-text">Symptoms</b></a></li>
+                  <li class="col s12 tab"><a href="#tab4"><b class="white-text">Tips</b></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col s8 content">
+              <div class="row">
+                <div class="col s12 box" id="tab1">
+                  <h2>Background</h2>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat repellendus, sapiente fugit,
+                    ad
+                    obcaecati sint quisquam minima voluptatibus culpa sunt cupiditate hic sequi. Exercitationem qui
+                    molestiae rem repellat! Placeat aut quam voluptatibus deserunt. Eaque rerum aspernatur dolores
+                    ipsa
+                    placeat, nam, sint dignissimos ad sunt nobis cum, illum voluptas laudantium recusandae.</p>
+                </div>
+                <div class="col s12 box" id="tab2">
+                  <h2>Causes</h2>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat repellendus, sapiente fugit,
+                    ad
+                    obcaecati sint quisquam minima voluptatibus culpa sunt cupiditate hic sequi. Exercitationem qui
+                    molestiae rem repellat! Placeat aut quam voluptatibus deserunt. Eaque rerum aspernatur dolores
+                    ipsa
+                    placeat, nam, sint dignissimos ad sunt nobis cum, illum voluptas laudantium recusandae.</p>
+                </div>
+                <div class="col s12 box" id="tab3">
+                  <h2>Symptoms</h2>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat repellendus, sapiente fugit,
+                    ad
+                    obcaecati sint quisquam minima voluptatibus culpa sunt cupiditate hic sequi. Exercitationem qui
+                    molestiae rem repellat! Placeat aut quam voluptatibus deserunt. Eaque rerum aspernatur dolores
+                    ipsa
+                    placeat, nam, sint dignissimos ad sunt nobis cum, illum voluptas laudantium recusandae.</p>
+                </div>
+                <div class="col s12 box" id="tab4">
+                  <h2>Tips</h2>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat repellendus, sapiente fugit,
+                    ad
+                    obcaecati sint quisquam minima voluptatibus culpa sunt cupiditate hic sequi. Exercitationem qui
+                    molestiae rem repellat! Placeat aut quam voluptatibus deserunt. Eaque rerum aspernatur dolores
+                    ipsa
+                    placeat, nam, sint dignissimos ad sunt nobis cum, illum voluptas laudantium recusandae.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--Scripts-->
+  <script src="../static/js/jquery-2.1.1.js"></script>
+  <script src="../static/js/materialize.js"></script>
+  <script>
+    M.AutoInit();
+  </script>
+</body>
+
+</html>
