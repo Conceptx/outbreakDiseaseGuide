@@ -9,7 +9,7 @@ CORS(app)
 
 try:
     # database configuration
-    db = client['odg']
+    db = client['kudziya']
 
     @app.route('/cholera')
     def cholera():
