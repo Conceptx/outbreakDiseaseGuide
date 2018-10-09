@@ -13,7 +13,6 @@ try:
 
     # global function declarations
     app.jinja_env.globals.update(zip=zip)
-    app.jinja_env.globals.update(format=format)
 
     @app.route('/')
     @app.route('/cholera')
