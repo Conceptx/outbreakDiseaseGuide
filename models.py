@@ -1,3 +1,3 @@
 from pymongo import MongoClient, errors
 
-client = MongoClient("mongodb://kudziya:kudziya2018@ds119113.mlab.com:19113/kudziya")
+client = MongoClient("mongodb://odg:odg2018@ds020938.mlab.com:20938/webtech")

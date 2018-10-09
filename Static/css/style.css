@@ -25,11 +25,6 @@
   /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
-html {
-  background: url(../img/pills.jpeg) no-repeat;
-  background-size: cover;
-}
-
 nav,
 .tab {
   background-color: #062338 !important;

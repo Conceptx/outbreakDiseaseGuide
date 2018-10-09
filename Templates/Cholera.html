@@ -3,10 +3,31 @@
 
 <head>
   <!--Stylesheets-->
-  <link rel="stylesheet" href="../static/css/fontawesome.css">
   <link rel="stylesheet" href="../static/css/materialize.css">
-  <link rel="stylesheet" href="../static/css/iconfont/material-icons.css">
   <link rel="stylesheet" href="../static/css/style.css">
+
+  {% if page == "cholera"%}
+  <style>
+    html {
+      background: url("{{url_for('static', filename='img/pills.jpeg')}}") no-repeat;
+      background-size: cover;
+    }
+  </style>
+  {% elif page == "typhoid" %}
+  <style>
+    html {
+      background: url("{{url_for('static', filename='img/typhoid.jpg')}}") no-repeat;
+      background-size: cover;
+    }
+  </style>
+  {% else %}
+  <style>
+    html {
+      background: url("{{url_for('static', filename='img/mosquito.jpeg')}}") no-repeat;
+      background-size: cover;
+    }
+  </style>
+  {% endif %}
 
   <title>ODG - Outbreak Disease Guide</title>
 </head>
@@ -61,12 +82,14 @@
   <section class="section section-nav center">
     <div class="row">
       <div class="col m3 hide-on-small-and-down">
-        {% for i in diseases %}
-        <div class="col m12 zoom zoom-hover">
-          <div class="card-panel small blue">
-            <h4>{{i}}</h4>
+        {% for i, j in zip(diseases, links) %}
+        <a href="/{{j}}">
+          <div class="col m12 zoom zoom-hover">
+            <div class="card-panel small blue">
+              <h4 class="black-text">{{i}}</h4>
+            </div>
           </div>
-        </div>
+        </a>
         {% endfor %}
       </div>
       <div class="col m1">

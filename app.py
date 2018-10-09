@@ -9,8 +9,13 @@ CORS(app)
 
 try:
     # database configuration
-    db = client['kudziya']
+    db = client['webtech']
 
+    # global function declarations
+    app.jinja_env.globals.update(zip=zip)
+    app.jinja_env.globals.update(format=format)
+
+    @app.route('/')
     @app.route('/cholera')
     def cholera():
 
@@ -26,7 +31,9 @@ try:
         for i in query:
             information.append((i['Background'], i['Causes'], i['Symptoms'], i['Tips']))
 
-        return render_template('Cholera.html', diseases=diseases, information=information)
+        links = ['cholera', 'typhoid', 'malaria']
+
+        return render_template('Cholera.html', diseases=diseases, information=information, page="cholera", links=links)
 
     @app.route('/typhoid')
     def typhoid():
@@ -43,7 +50,9 @@ try:
         for i in query:
             information.append((i['Background'], i['Causes'], i['Symptoms'], i['Tips']))
 
-        return render_template('Typhoid.html', diseases=diseases, information=information)
+        links = ['cholera', 'typhoid', 'malaria']
+
+        return render_template('Typhoid.html', diseases=diseases, information=information, page="typhoid", links=links)
 
     @app.route('/malaria')
     def malaria():
@@ -60,7 +69,9 @@ try:
         for i in query:
             information.append((i['Background'], i['Causes'], i['Symptoms'], i['Tips']))
 
-        return render_template('Malaria.html', diseases=diseases, information=information)
+        links = ['cholera', 'typhoid', 'malaria']
+
+        return render_template('Malaria.html', diseases=diseases, information=information, page="malaria", links=links)
 
 except (Exception, errors):
     redirect(url_for('notFound'))
