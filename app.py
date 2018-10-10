@@ -4,7 +4,7 @@ from models import client, errors
 import json
 import gunicorn
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 CORS(app)
 
 try:
